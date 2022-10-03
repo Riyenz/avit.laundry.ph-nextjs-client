@@ -1,7 +1,26 @@
-import '../styles/globals.css'
+import Head from 'next/head';
+import { DEFAULT_SEO } from '../constants/seo.const';
+import './../styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <div>
+      <Head>
+        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5f50e6' />
+        <meta name='msapplication-TileColor' content='#5f50e6' />
+        <meta name='theme-color' content='#ffffff' />
+
+        <title>{DEFAULT_SEO.title}</title>
+        <meta name='description' content={DEFAULT_SEO.description} />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
