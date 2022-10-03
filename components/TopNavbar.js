@@ -24,7 +24,7 @@ export default function TopNavbar() {
         <div className='ml-auto grid grid-flow-col gap-6'>
           {socials.map((social) => {
             return (
-              <a href={social.href} target='_blank' rel='noreferrer noopener'>
+              <a key={social.icon} href={social.href} target='_blank' rel='noreferrer noopener'>
                 <Icon name={social.icon} className='w-[15px] h-[15px] text-primary' />
               </a>
             );
