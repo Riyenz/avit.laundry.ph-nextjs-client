@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply w-screen overflow-x-hidden;
+  }
+
+  .avit-container {
+    @apply w-[1170px] max-w-full mx-auto px-6;
+  }
+
+  .zoominout {
+    animation: zoomInOut 3s ease-in-out infinite;
+  }
+}
